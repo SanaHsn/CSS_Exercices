@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confidential Email Page</title>
+    <style>
+      #email {
+        padding: 50px;
+        margin-top: 50px;
+        width: 500px;
+        border: 2px solid black;
+        box-sizing: border-box;
+      }
+      #confidential {
+        display: inline-block;
+        padding: 20px;
+        margin-left: 200px;
+        border: 2px solid blue;
+        transform: rotate(-30deg);
+      }
+      #top-secret {
+        display: inline-block;
+        padding: 20px;
+        margin-left: 200px;
+        border: 2px solid red;
+        transform: rotate(20deg);
+      }
+      .blurred {
+        filter: blur(3px);
+      }
+    </style>
+  </head>
+  <body>
+    <main id="email">
+      <div id="confidential">CONFIDENTIAL</div>
+      <p>Lorem ipsum dolor sit amet, <span class="blurred">consectetur adipiscing elit</span>.</p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.<span class="blurred">Dolores
+        aperiam libero minima</span> . Optio dicta sit, error odio quaerat
+        necessitatibus officiis inventore voluptas fugiat iure suscipit fuga
+        perspiciatis officia eum rem.
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="blurred">Explicabo, iste</span>.</p>
+      <div id="top-secret">TOP SECRET</div>
+    </main>
+  </body>
+</html>

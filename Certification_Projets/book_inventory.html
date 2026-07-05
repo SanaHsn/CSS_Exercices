@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Inventory</title>
+    <style>
+        tr[class="read"] {
+            background-image: linear-gradient(to right, #c3eed1, #afe9ab);
+        }
+        span{
+            display: inline-block;
+        }
+         tr[class="to-read"] {
+            border: 1px solid #f5c6cb;
+            background-image: linear-gradient(to right, #f8d7da, #f1b0b7);
+        }
+        tr[class="in-progress"]  {
+            border: 1px solid #ffeeba;
+            background-image: linear-gradient(to right, #fff3cd, #ffe8a1);
+        }
+        tr[class="read"] span[class="status"] {
+            border: 1px solid #728874;
+            background-image: linear-gradient(to right, #c3eed1, #afe9ab);
+        }
+        tr[class="to-read"] span[class="status"] {
+            border: 1px solid #9b7c7f;
+            background-image: linear-gradient(to right, #f8d7da, #f1b0b7);
+        }
+        tr[class="in-progress"] span[class="status"] {
+            border: 1px solid #9b947f;
+            background-image: linear-gradient(to right, #fff3cd, #ffe8a1);
+        }
+         span[class="status"], span[class^="rate"] {
+            height: 20px;
+            width: auto;
+            padding: 0.2rem;
+        }
+span[class^="rate"] > span
+{
+            border: 1px solid rgb(78, 78, 78);
+            border-radius: 2px;
+            margin: .5em;
+            height: 15px;
+            width: 15px;
+            background-color: #ebeeed;
+        }
+        span[class~="one"] :first-child {
+    background-image: linear-gradient(to right, #ffcc00, #ff9900);
+        }
+        span[class~="two"] :nth-child(-n+2) {
+            background-image: linear-gradient(to right, #ff0000, #ff9900);
+        }
+        span[class~="three"] > span {
+            background-image: linear-gradient(to right, #ffcc00, #ff9900);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Book Inventory</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th>Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="read">
+                    <td>Harry Potter and the Sorcerer's Stone</td>
+                    <td>J.K. Rowling</td>
+                    <td>Fantasy</td>
+                    <td>Available
+                        <span class="status">Read</span>
+                    </td>
+                    <td>4.8
+                        <span class="rate one">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </td>
+                </tr>
+                <tr class="to-read">
+                    <td>The Great Gatsby</td>
+                    <td>F. Scott Fitzgerald</td>
+                    <td>Classic</td>
+                    <td>Checked Out
+                        <span class="status">To Read</span>
+                    </td>
+                    <td>4.2
+                        <span class="rate">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </td>
+                </tr>
+                <tr class="read">
+                    <td>To Kill a Mockingbird</td>
+                    <td>Harper Lee</td>
+                    <td>Classic</td>
+                    <td>Available
+                        <span class="status">Read</span>
+                    </td>
+                    <td>4.5
+                        <span class="rate two">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr class="in-progress">
+                    <td>1984</td>
+                    <td>George Orwell</td>
+                    <td>Dystopian</td>
+                    <td>Checked Out
+                        <span class="status">In Progress</span>
+                    </td>
+                    <td>4.6
+                        <span class="rate">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </td>
+                </tr>
+                <tr class="read">
+                    <td>The Hobbit</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Fantasy</td>
+                    <td>Available
+                        <span class="status">Read</span>
+                    </td>
+                    <td>4.7
+                        <span class="rate three ">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

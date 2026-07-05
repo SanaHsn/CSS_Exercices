@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Une page de flyer pour un événement</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            width: 100vw;
+            min-height: calc(100vh - 100px);
+          
+           
+        }
+        section {
+            width: 60%;
+            display: inline-block;
+            text-align: center;
+            justify-content: center;
+        }   
+        hr {
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.freecodecamp.org/curriculum/labs/event.jpg" alt="">
+        <h1>Event Flyer</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Event Details</h2>
+            <p>Date: July 15, 2024</p>
+            <p>Time: 6:00 PM - 9:00 PM</p>
+            <p>Location: Community Center, Main Hall</p>
+            <p>Description: Join us for an evening of fun, food, and entertainment! This
+        </section>
+        <hr>
+        <section>
+            <h2>Event Location</h2>
+            <p>123 Main Street, Hometown, Country</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9556513153162!3d-37.81732797975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577db8d4c5e4b0!2sEnvato!5e0!3m2!1sen!2sau!4v1614031234567!5 w"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+            ></iframe>  
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <p>&copy; 2024 Event Flyer. All rights reserved.</p>
+    </footer>
+</body>
+</html>

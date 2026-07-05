@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <style> 
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #navbar {
+            position: static;
+            top: 0;
+            left: 0;
+            width: 100%;           
+            height: 10vh;         
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #navbar header {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        #navbar h1 {
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+        }
+        #navbar a {
+            color: white;
+            text-decoration: none;
+        }
+         ul {
+            list-style-type: none;
+            padding: 0;
+        }
+         li {
+            margin-bottom: 20px;
+        }
+        
+       
+        .main-section {
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+        .main-section header {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        code {
+            display: block;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin-top: 20px; 
+              
+        }
+     
+         var {
+            font-style: italic;
+        }
+         samp {
+            display: block;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin-top: 20px;
+        }
+         @media (max-width: 600px) {
+            #navbar {
+                height: auto;
+                padding: 10px;
+            }
+            #navbar header {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+            }
+            #main-doc {
+                padding: 10px;
+            }
+        }   
+    
+    </style>
+            
+  </head>
+  <body>
+    <main id="main-doc">
+        
+            <nav id="navbar">
+            <header>
+                <h1>JS Documentation</h1>
+            </header>
+            <a class="nav-link" href="#Introduction_JavaScript">Introduction JavaScript</a>
+                <a class="nav-link" href="#Getting_Started">Getting Started</a>
+                <a class="nav-link" href="#Basic_Syntax">Basic Syntax</a>
+                <a class="nav-link" href="#Advanced_Topics">Advanced Topics</a>
+                <a class="nav-link" href="#Conclusion_JavaScript">Conclusion JavaScript</a>
+        </nav>
+      <section class="main-section" id="Introduction_JavaScript">
+         <header>
+            Introduction JavaScript
+         </header> 
+        <p>
+          JavaScript is a versatile programming language that allows developers
+          to create dynamic and interactive web applications. It is widely used
+          for both client-side and server-side development, making it an
+          essential tool for modern web development.
+          
+        </p>
+        <pre>
+            <code class="language-js">
+            let x = 5;
+            let y = 6;
+            let z = x + y;
+            </code>
+        </pre>
+        <p>
+            With JavaScript, you can manipulate the DOM (Document Object Model),
+            handle events, and make asynchronous requests to create a seamless
+            user experience. It is supported by all major web browsers and has a
+            large ecosystem of libraries and frameworks that further enhance its
+            capabilities.
+        </p>
+        <p>
+            Whether you are a beginner or an experienced developer, learning
+            JavaScript is crucial for building modern web applications and
+            staying relevant in the ever-evolving world of web development.
+        </p>
+             <pre><code class="language-css">
+                .container {
+                display: flex;
+                gap: 1rem;
+                }
+            </code></pre>
+      </section>
+
+      <section class="main-section" id="Getting_Started">
+        <header>
+          Getting Started
+        </header>
+        <p>
+          To get started with JavaScript, you can include it in your HTML file
+          using the &lt;script&gt; tag. You can write JavaScript code directly
+          within the &lt;script&gt; tag or link to an external JavaScript file.
+        </p>
+        <ul>
+            <li>
+            <code>
+                &lt;script&gt;
+                // Your JavaScript code here
+                &lt;/script&gt;
+            </code>
+        </li>
+        <li>
+            <code>
+                &lt;script src="your-script.js"&gt;&lt;/script&gt;
+            </code>
+        </li>
+        <li>
+            Once you have included JavaScript in your HTML file, you can start
+            writing your code. You can use variables to store data, functions to
+            create reusable blocks of code, and control structures to manage the
+            flow of your program.
+        </li>
+        <li>
+            For example, you can create a simple function to add two numbers:
+            <code>
+                function add(a, b) {
+                    return a + b;
+                }
+            </code>
+        </li>
+        <li>
+            You can then call this function and pass in the numbers you want to
+            add:
+            <code>
+                let result = add(5, 6);
+                console.log(result); // Output: 11
+            </code>
+        </li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Basic_Syntax">
+        <header>
+          Basic Syntax
+        </header>
+        <p>
+          JavaScript has a simple syntax that is easy to learn. It uses
+          variables, functions , and control structures to create logic and
+          functionality in your code.
+          
+        </p>
+        <code>x = 5;</code>
+        <p>
+            Variables are used to store data, and functions allow you to
+            encapsulate reusable code. Control structures such as loops and
+            conditionals help you control the flow of your program.
+        </p>
+        <code>
+            x = 5;
+            y = 6;
+            z = x + y;
+        </code>
+        <p>
+
+            JavaScript also supports object-oriented programming, allowing you
+            to create objects and use inheritance to organize your code in a
+            more efficient way.
+            <p>La variable <code>x = 5;</code> est définie avant le calcul.</p>
+
+        </p>
+      </section>
+
+      <section class="main-section" id="Advanced_Topics">
+        <header>
+          Advanced Topics
+        </header>
+        <p>
+          Once you have a good understanding of the basics, you can explore
+          advanced topics such as asynchronous programming, closures, and
+          prototypes to enhance your JavaScript skills.
+        </p>
+        <pre><code class="language-css">
+            .container {
+            display: flex;
+            gap: 1rem;
+            }
+        </code></pre>
+
+        <p>
+            Asynchronous programming allows you to handle tasks that take time to
+            complete, such as fetching data from an API, without blocking the
+            main thread. Closures enable you to create functions with access to
+            variables from their outer scope, while prototypes allow you to
+            create objects that inherit properties and methods from other objects.
+        </p>
+        <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+      </section>
+      <section class="main-section" id="Conclusion_JavaScript">
+        <header>
+          Conclusion JavaScript
+        </header>
+        <p>
+          JavaScript is a powerful language that continues to evolve and shape
+          the web. By mastering JavaScript, you can create engaging and
+          interactive web applications that provide a great user experience.
+        </p>
+        <p>Message from my computer:</p>
+        <p><samp>File not found.<br>Press F1 to continue</samp></p>
+      </section>
+    </main>
+  </body>
+</html>

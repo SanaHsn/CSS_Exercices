@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Form</title>
+    
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #282c34;
+        color: white;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        background-color: #3c4048;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 500px;
+        width: 100%;
+        margin: auto;
+      }
+      input:not([type="radio"]),
+      select,
+      textarea,
+      button {
+        display: block;
+        width: 80%;
+        margin: 10px 0 20px 0;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+
+      input:focus,
+      textarea:focus {
+        border: 2px solid orange;
+      }
+      /* :is(input,select ,textarea):invalid  */
+      input:invalid,
+      select:invalid,
+      textarea:invalid {
+        border: 2px solid red;
+      }
+
+      input:valid,
+      select:valid,
+      textarea:valid {
+        border: 2px solid green;
+      }
+      button {
+        background-color: #555;
+        color: white;
+        border: none;
+      }
+      button:hover {
+        background-color: orange;
+        color: white;
+        cursor: pointer;
+      }
+      .radio-group input[type="radio"]:checked {
+        border: 2px solid rgb(206, 5, 5);
+        background-color: lavender;
+        box-shadow: 1px 1px 5px gray;
+        display: inline-block;
+      }
+      input[type="radio"]:checked + label {
+        color: orange;
+      }
+      input:first-of-type {
+        margin-top: 20px;
+        border-radius: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="position">Position Applied For</label>
+        <select name="position" id="position" required>
+          <option value="">Select a position</option>
+          <option value="developer">Developer</option>
+          <option value="designer">Designer</option>
+          <option value="manager">Manager</option>
+        </select>
+
+        <fieldset class="radio-group">
+          <legend>Job Time</legend>
+
+          <input type="radio" name="availability" id="full-time" required />
+          <label for="full-time">Full Time</label>
+
+          <input type="radio" name="availability" id="part-time" required />
+          <label for="part-time">Part Time</label>
+
+          <input type="radio" name="availability" id="internship" required />
+          <label for="internship">Internship</label><br><br>
+
+          <label for="message">Message</label>
+          <textarea
+            name=""
+            id="message"
+            cols="30"
+            rows="5"
+            placeholder="Tell us about yourself..."
+            required
+          >
+          </textarea>
+
+          <button type="submit">Submit Application</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House Painting</title>
+    <link rel="stylesheet" href="house-painting.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(174, 228, 241);
+        width: 100%;
+        height: 100vh;
+      }
+      .green {
+        background-color: rgb(30, 104, 5);
+        width: 100%;
+        height: 40%;
+        position: absolute;
+        bottom: 0;
+      }
+      #house {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        margin: 0 auto;
+        top: 25vh;
+        border: 8px solid rgb(157, 84, 33);
+        background-color: rgb(238, 130, 111);
+      
+       
+      }
+      #chimney {
+        position: absolute;
+        width: 15%;
+        height: 25%;
+        top: -25%;
+        left: 75%;
+        background-color: rgb(157, 84, 33);
+        border: 8px solid rgb(121, 66, 25);
+        z-index: -1;
+       
+      }
+      #roof {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        top: 0;
+        background-color: rgb(238, 130, 111); /* couleur du toit */
+        border: none;
+        background-image:
+          repeating-linear-gradient(
+            45deg,
+            transparent 0,
+            transparent 13px,
+            rgb(157, 84, 33) 15px,
+            rgb(157, 84, 33) 22px
+          ),
+          repeating-linear-gradient(
+            -45deg,
+            transparent 0,
+            transparent 13px,
+            rgb(157, 84, 33) 15px,
+            rgb(157, 84, 33) 22px
+          );
+      }
+      #door {
+        position: absolute;
+        width: 30%;
+        max-width: 130px;
+        height: 45%;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgb(221, 219, 218);
+        border: 8px solid rgb(157, 84, 33);
+        
+      }
+      .poinger {
+        position: absolute;
+        width: 12%;
+        height: 10%;
+        background-color: rgb(157, 84, 33);
+        border-radius: 50%;
+        top: 52%;
+        right: 5%;
+      }
+
+      #window-1 {
+        position: absolute;
+        width: 22%;
+        height: 30%;
+        background-color: rgb(238, 224, 162);
+        border: 8px solid rgb(157, 84, 33);
+        top: 30%;
+        left: 7%;
+      }
+      #window-2 {
+        position: absolute;
+        width: 22%;
+        height: 30%;
+        background-color: rgb(238, 224, 162);
+        border: 8px solid rgb(157, 84, 33);
+        top: 30%;
+        right: 7%;
+      }
+      .border-middel-window {
+        width: 5px;
+        height: 100%;
+        left: 50px;
+        margin: 0 auto;
+        background-color: rgb(157, 84, 33);
+      }
+      .welcome {
+        position: absolute;
+        width: 126px;
+        height: 40px;
+        font-weight: bold;
+        background-color: rgb(187, 233, 135);
+        color: rgb(0, 0, 0);
+        border: 2px solid black;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 103%;
+        left: 35%;
+        z-index: 10;
+        transform: skewX(-25deg);
+      }
+    </style>
+  </head>
+  <body>
+      
+   <div class="green"></div>
+      <div id="house">
+        <div id="chimney"></div>
+        <div id="roof"></div>
+        <div class="walls"></div>
+        <div id="door">
+          <div class="poinger"></div>
+        </div>
+        <div class="welcome">WELCOME</div>
+        <div id="window-1">
+          <div class="border-middel-window"></div>
+        </div>
+        <div id="window-2">
+          <div class="border-middel-window"></div>
+        </div>
+      </div>
+    
+  </body>
+</html>

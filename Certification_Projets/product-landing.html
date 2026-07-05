@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Landing Page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html, body {
+        height: 100%;
+      }
+      body {
+
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+      }
+      main {
+        flex: 1;
+      }
+      
+      #section-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "form "
+        "video";
+        gap: 20px;
+      }
+
+      header {
+        
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;      
+
+      }
+      #nav-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        z-index: 1000;
+        }
+       
+        nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      nav a:hover {
+        background-color: rgb(220, 220, 220);
+        color: #333;
+      }
+
+      #header-img {
+        height: 50px;
+        width: auto;
+      }
+    
+    
+      video {
+        display: block;
+        margin: 50px auto;
+        max-width: 100%;
+        height: auto;
+      }
+      form {
+        grid-area: form;
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+      }
+      input[type="email"] {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 300px;
+        margin-right: 10px;
+      }
+      input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: rgb(220, 220, 220);
+        color: #333;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      footer a {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+         address {
+          font-style: normal;
+          margin-bottom: 20px;
+        }
+            @media (min-width: 600px) { 
+        #section-grid {
+          grid-template-columns: 1fr ;
+            grid-template-areas:
+        "video"
+        "form";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+        <header id="header">
+      <img
+        src="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
+        alt="Product Logo"
+        id="header-img"
+      />
+      <nav id="nav-bar">
+        <a href="#video" class="nav-link">Features</a>
+        <a href="#form" class="nav-link">Pricing</a>
+        <a href="#footer" class="nav-link">Contact</a>
+      </nav>
+    </header>
+    <section id="section-grid">
+      <video width="500" src="#" height="280" id="video" controls></video>
+      <form action="https://www.freecodecamp.org/email-submit" id="form">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+        <input type="submit" id="submit" value="Subscribe" />
+      </form>
+    </section>
+</main>
+<footer id="footer">
+  <address>
+    <p>Contact us at:</p>
+    contact us at: <a href="mailto:contact@example.com">Email Us</a> or call
+    us at: <a href="tel:+1234567890">+1 (234) 567-890</a>
+    <br />
+    Follow us on:
+    <a href="https://www.facebook.com/freecodecamp/"> Facebook </a>
+    <a href="https://twitter.com/freecodecamp/"> Twitter </a>
+    <a href="https://instagram.com/freecodecamp"> Instagram </a>
+    <a href="https://www.linkedin.com/school/free-code-camp/"> LinkedIn </a>
+    <a href="https://www.youtube.com/freecodecamp"> YouTube </a>
+    <br />
+    <a href="https://www.freecodecamp.org" target="_blank" rel="noreferrer"
+      >freeCodeCamp</a
+    >
+    <br />
+    <a
+      href="https://www.freecodecamp.org/privacy-policy"
+      target="_blank"
+      rel="noreferrer"
+      >Privacy Policy</a
+    >
+    <br />
+  </address>
+  <p>&copy; 2024 Product Landing Page. All rights reserved.</p>
+</footer>
+  </body>
+</html>

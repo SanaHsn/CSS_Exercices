@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .pricing-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            
+        }
+        .pricing-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 0 0 200px;
+            background-color: #f8f8f8;
+            border: 2px solid black;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        basic-plan{
+          order:0;
+        }
+        .pro-plan {
+            order: 1;
+            flex-grow: 2;
+
+        }
+        .premium-plan {
+            order: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pricing Plans</h1>
+    <div class="pricing-container">
+        <div class="pricing-card basic-plan">
+            <h2>Basic</h2>
+            <p>$9/month</p>
+            <ul>
+                <li>Feature A</li>
+                <li>Feature B</li>
+                <li>Feature C</li>
+            </ul>
+            <button>Select Plan</button>
+        </div>
+        <div class="pricing-card pro-plan">
+            <h2>Pro</h2>
+            <p>$19/month</p>
+            <ul>
+                <li>Feature A</li>
+                <li>Feature B</li>
+                <li>Feature C</li>
+                <li>Feature D</li>
+            </ul>
+            <button>Select Plan</button>
+        </div>
+        <div class="pricing-card premium-plan">
+            <h2>Premium</h2>
+            <p>$29/month</p>
+            <ul>
+                <li>Feature A</li>
+                <li>Feature B</li>
+                <li>Feature C</li>
+                <li>Feature D</li>
+                <li>Feature E</li>
+            </ul>
+            <button>Select Plan</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Daily Local News</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        article {
+             background-color: #e6e6e6;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #e6e6e6;
+        }
+         h1, h2, h3 {
+            margin-top: 0;
+        }
+        
+        .newspaper-layout {
+            display: grid;
+            grid-template-areas:
+                "title title title"
+                "feature-article feature-article  cover-image"
+                "secondary-article secondary-article cover-image"
+                "small-article1 small-article2 small-article3";
+                grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto 1fr 1fr 1fr;
+             gap: 20px;
+            padding: 20px;
+        }
+        .title {
+            grid-area: title;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            
+        }
+        .feature-article {
+            grid-area: feature-article;
+            background-color: #e6e6e6;
+           
+        }
+        .cover-image {
+            grid-area: cover-image;
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e6e6e6;
+            padding: 20px;
+            
+        }
+        .secondary-article {
+            grid-area: secondary-article;
+        }
+        .small-article1 {
+            grid-area: small-article1;
+        }
+        .small-article2 {
+            grid-area: small-article2;
+        }
+        .small-article3 {
+            grid-area: small-article3;
+        }
+       .cover-image img {
+            max-width: 100%;
+            border-radius: 8px;
+
+        }
+       
+    </style>
+  </head>
+  <body>
+    <main class="newspaper-layout">
+      <header class="title">
+        <h1>The Daily Local News</h1>
+    </header>
+        <article class="feature-article">
+          <h2>Local Hero Saves Cat from Tree</h2>
+          <p>
+            In a heartwarming story, a local resident climbed a tree to rescue a
+            stranded cat. The community is praising the hero for their bravery
+            and kindness.
+          </p>
+        </article>
+        <article class="small-article1">
+          <h3>New Park Opens Downtown</h3>
+          <p>
+            The city has unveiled a new park in the downtown area, complete with
+            walking trails, a playground, and a community garden. Residents are
+            excited to have a new space to enjoy nature and spend time with
+            family.
+          </p>
+        </article>
+        <article class="small-article2">
+          <h3>Local Bakery Wins National Award</h3>
+          <p>
+            A beloved local bakery has been recognized with a prestigious
+            national award for its delicious pastries and commitment to quality.
+            The bakery's owner expressed gratitude to the community for their
+            support.
+          </p>
+        </article>
+        <article class="small-article3">
+          <h3>Community Garden Flourishes</h3>
+          <p>
+            The community garden has seen a surge in participation, with
+            residents coming together to grow fresh produce and flowers. The
+            garden has become a hub for socializing and promoting
+            sustainability.
+          </p>
+        </article>
+        <article class="secondary-article">
+          <h2>City Council Approves New Housing Development</h2>
+          <p>
+            The city council has approved a new housing development project
+            aimed at providing affordable housing options for residents. The
+            development will include a mix of apartments and townhouses, along
+            with green spaces and community amenities.
+          </p>
+        </article>
+        <figure class="cover-image">
+          <img
+            src="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
+            alt="Local News Image"
+          />
+        </figure>
+      
+    </main>
+  </body>
+</html>

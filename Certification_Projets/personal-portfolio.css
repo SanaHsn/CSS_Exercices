@@ -1,0 +1,243 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+html {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--main-white);
+}
+
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--main-red);
+  z-index: 10;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+  margin-right: 2rem;
+}
+
+#navbar li {
+  padding: 2rem;
+}
+
+#navbar a {
+  color: var(--main-white);
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: background-color 0.3s ease;
+  padding: 2rem;
+  /* ➡ Le lien devient rouge immédiatement au survol.
+
+Avec transition: color 0.3s ease; :
+
+➡ Le lien passe de sa couleur initiale à rouge doucement, sur 0.3 seconde, avec une vitesse “ease” (commence lentement, accélère, puis ralentit à la fin). */
+  cursor: pointer;
+}
+#navbar a:hover {
+  background-color: var(--main-blue);
+
+
+}
+
+/* Section Welcome */
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+#welcome-section h1 {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+#welcome-section p {
+  font-size: 3rem;
+  letter-spacing: 1.5px;
+  font-style: italic;
+  font-weight: 200;
+  max-width: 600px;
+  text-align: center;
+  color: var(--main-red);
+}
+
+/* Section Projects */
+#project-section {
+  padding: 4rem 2rem;
+  background-color: var(--main-blue);
+  text-align: center;
+}
+
+#project-section h2 {
+  font-size: 4rem;
+  border-bottom: var(--main-white) solid 2px;
+  max-width: 700px;
+  margin: 0 auto 6rem auto;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.project-tile {
+  background-color: var(--main-gray);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.project-tile:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.project-image {
+  width: 100%;
+  height: calc(100% - 6.8rem);
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+  color: var(--main-white);
+}
+
+.project-tile a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.btn-show-all{
+    display: inline-block;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  color: var(--main-white);
+  background-color: var(--main-gray);
+  border-radius: 4px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 6rem;
+}
+.btn-show-all:hover {
+  background-color: var(--main-red);
+}
+.btn-show-all i {
+  margin-left: 1rem;
+}
+
+/* Contact Section */
+#contact {
+    height: 100vh;
+    background-color: var(--main-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+      border-bottom: 5px solid var(--main-red);
+
+}
+#contact h2 {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    color: var(--main-white);
+}
+.social-media a {
+    color: var(--main-white);
+    font-size: 3rem;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.social-media a:hover {
+    color: var(--main-red);
+}
+.social-media a i {
+    margin-right: 1.5rem;
+    color: var(--main-red);
+}
+.social-media a:hover i {
+    color: var(--main-white);
+}
+.contact-email p {
+    font-size: 1.8rem;
+    color: var(--main-white);
+    margin-top: 1rem;
+}
+.contact-email p a {
+    color: var(--main-red);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.contact-email p a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section  */
+footer {
+    background-color: var(--main-gray);
+    text-align: center;
+    padding: 4rem;
+    color: var(--main-white);
+    font-size: 1.5rem;
+}
+    
+@media (max-width: 768px) {
+    #navbar{
+        justify-content: center;
+        
+    }
+    #navbar a{
+        font-size: 2.5rem;
+    }
+  /* #welcome-section h1 {
+    font-size: 4rem;
+  }
+  #welcome-section p {
+    font-size: 2rem;
+    max-width: 400px;
+  }
+  #project-section h2 {
+    font-size: 3rem;
+    max-width: 500px;
+  } */
+    
+}
